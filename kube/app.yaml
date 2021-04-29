@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: app
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       name: app
@@ -42,7 +42,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /second
+      - path: /v2
         pathType: ImplementationSpecific
         backend:
           service:
